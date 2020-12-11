@@ -1,0 +1,132 @@
+.App {
+    padding: 2em 1em;
+}
+
+.status {
+    display: block;
+    width: max-content;
+    margin-left: auto;
+}
+
+.note-input, .list-group {
+    max-width: 750px;
+    margin: auto;
+}
+
+.todo-input {
+    font-size: 22px;
+    height: calc(1.5em + .75rem + 10px);
+}
+
+.todo-category {
+    font-size: 18px;
+    height: calc(1.5em + .75rem + 16px);
+}
+
+.list-group-item {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.list-group-item .content {
+    font-size: 20px;
+}
+
+.custom-select {
+    display: block;
+    width: max-content;
+}
+
+.todo-checkbox {
+    display: inline;
+    width: max-content;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.todo-input:focus,
+.todo-checkbox:focus {
+    box-shadow: none;
+}
+
+.delete-all-btn {
+    display: block;
+    width: max-content;
+}
+
+.theme-shadow {
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.06);
+}
+
+.cross {
+    display: block;
+    position: relative;
+    width: 25px;
+    margin-right: 10px;
+    height: 18px;
+    opacity: 0.1;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+.cross:hover {
+    opacity: 0.9;
+}
+.cross:before, .cross:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 18px;
+    width: 2px;
+    background-color: darkred;
+}
+.cross:before {
+    transform: rotate(45deg);
+}
+.cross:after {
+    transform: rotate(-45deg);
+}
+
+.tick {
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 18px;
+    opacity: 0.1;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+.tick:hover {
+    opacity: 0.9;
+}
+.tick:before, .tick:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 18px;
+    width: 2px;
+    background-color: green;
+}
+.tick:before {
+    transform: rotate(45deg);
+}
+.tick:after {
+    transform: rotate(-41deg);
+    height: 10px;
+    left: 6px;
+    top: 7px;
+}
+
+@media (max-width: 767px) {
+    .App {
+        padding: 2em 0.5em;
+    }
+
+    .list-group-item .content {
+        font-size: 18px;
+    }
+
+    .cross, .tick {
+        opacity: 0.7;
+    }
+}
